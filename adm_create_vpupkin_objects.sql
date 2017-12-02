@@ -16,9 +16,14 @@ commit ;
 
 grant select, insert , update on vpupkin.countries to group101_2017;
 grant select, insert , update on vpupkin.regions to group101_2017;
+
+grant select, insert , update on vpupkin.employees to group101_2017;
+
 create sequence vpupkin.regions_seq start with 5; 
 grant select on vpupkin.regions_seq to group101_2017;
-
+grant select on vpupkin.employees to group101_2017;
 
 select * from vpupkin.regions;
 select * from dba_sequences where sequence_owner='VPUPKIN';
+
+grant update on vpupkin.employees to group101_17;
